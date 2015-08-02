@@ -7,8 +7,8 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');
 
-
-mongoose.connect('mongodb://127.0.0.1/news', function(err,db){
+// mongoose.connect('mongodb://127.0.0.1/news', function(err,db){
+mongoose.connect('MONGOLAB_URI', function(err,db){
     if (!err){
         console.log('Connected to /news!');
     }else{
