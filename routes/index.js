@@ -13,9 +13,9 @@ var Post = mongoose.model('Post');
 var Comment = mongoose.model('Comment');
 var User = mongoose.model('User');
 
-router.get('auth/facebook', passport.authenticate('facebook'));
+router.get('/auth/facebook', passport.authenticate('facebook'));
 
-router.get('auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }),
+router.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }),
   function(req, res) {
     console.log('in the router get facebook callback going back to slash home')
     res.redirect('/');
